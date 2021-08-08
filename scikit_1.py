@@ -21,7 +21,7 @@ gdp_per_capita = pd.read_csv("gdp_per_capita.csv", thousands=',', delimiter=',',
 
 country_stats = prepare_country_stats(oecd_bli, gdp_per_capita)
 
-print(oecd_bli)
+#print(oecd_bli)
 
 X=np.c_[country_stats["GDP per capita"]]
 y=np.c_[country_stats["Life satisfaction"]]
@@ -34,6 +34,6 @@ model=sklearn.linear_model.LinearRegression()
 
 model.fit(X,y)
 
-X_new=[[22587]]
+X_new=[[23587]]
 print(model.predict(X_new))
 
